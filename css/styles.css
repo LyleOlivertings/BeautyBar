@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -9,10 +13,11 @@ body {
 }
 
 header {
-    background-color: #C9A7AA;
+    background-color: #e6ddd6;
     padding: 20px;
     color: white;
     position: relative;
+    height: 100px;
 }
 
 header h1 {
@@ -21,32 +26,11 @@ header h1 {
     text-align: center; /* Center align the text */
 
 }
-
 .contact-info {
-    
-    text-align: right; /* Align only the contact info to the right */
-    
-    
-}
-
-.contact-info p {
+    text-align: right; /* align contact info to the right */
     margin: 0;
-    bottom: 0;
+    top: 0;
 }
-
-.contact-info a {
-    color: #e6ddd6;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-.contact-info {
-    
-    text-align: right; /* Align only the contact info to the right */
-    bottom: 0;
-}
-
 .socials {
     position: absolute;
     bottom: 0;
@@ -62,7 +46,7 @@ header h1 {
 
 /* Add the following CSS for the navigation panel */
 nav {
-    background-color: #AD737D;
+    background-color:  #C9A7AA;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -134,6 +118,40 @@ nav a:hover {
 
 
 
+.services {
+    background-color: #F5F5F5;
+    padding: 50px 20px;
+    display: flex; /* Use flexbox for a horizontal layout */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.service-image {
+    flex: 0 0 50%; /* Set the image to take up 50% of the width */
+    max-width: 50%; /* Ensure the image doesn't exceed 50% of the width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin-right: 20px; /* Add margin between image and content */
+}
+
+.service-content {
+    flex: 0 0 50%; /* Set the content to take up 50% of the width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    text-align: left; /* Align text to the left within the content */
+}
+
+.service-content h2 {
+    color: #333;
+}
+
+.service-content h3 {
+    color: #D19F90; /* Color for individual service headers */
+}
+
+.service-content p {
+    color: #666;
+}
+
+
+
 @media screen and (max-width: 768px) {
     .hero {
         padding: 20px 10px; /* Adjust padding for smaller screens */
@@ -152,5 +170,21 @@ nav a:hover {
     .cta-button {
         padding: 8px 16px; /* Adjust button padding for smaller screens */
         margin-top: 10px; /* Adjust top margin for smaller screens */
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .services {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .service-image {
+        display: none; /* Hide the image on small screens */
+    }
+
+    .service-content {
+        flex: 1; /* Take up full width on small screens */
+        margin-right: 0; /* Remove margin on small screens */
     }
 }
